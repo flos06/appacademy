@@ -16,14 +16,22 @@ let result2 = myMap(['run', 'Forrest'], function (el) {
 console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
-let myMap = function() {
-
+let myMap = function(array, cb) {
+    let newA = []
+    for (let i = 0; i < array.length; i++) {
+     let val = array[i]
+     newA.push(cb(val, i, array));
+     
+    }
+    return newA
 };
 
 
 
-
-
+let result2 = myMap(['run', 'Forrest'], function (el, i) {
+    return el.toUpperCase() + '! - ' + i;
+});
+console.log(result2)
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
 module.exports = myMap;
