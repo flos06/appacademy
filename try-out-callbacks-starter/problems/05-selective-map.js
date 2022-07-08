@@ -42,13 +42,41 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - How many times are you calling each callback function?
 *******************************************************************************/
 
-let selectiveMap = function() {
-
+let selectiveMap = function(array, cb1, cb2) {
+    let newA = []
+    for (let i = 0; i < array.length; i++) {
+        if (cb1(array[i])){
+            newA.push(cb2(array[i]))
+        } else { newA.push(array[i])}
+    }
+    return newA
 };
 
+function isEven(n) {
+    return n % 2 === 0;
+}
 
+function isPositive(n) {
+    return n > 0;
+}
 
+function square(n) {
+    return n * n;
+}
 
+function flipSign(n) {
+    return n * -1;
+}
+
+/*******************************************************************************
+Write a function `selectiveMap` that accepts an array and two callbacks as arguments.
+The function should return a new array where elements are replaced with the results
+of calling the second callback on the element only if calling the first callback
+on the element results in true. If calling the first callback on an element results
+in false, then the element should not be changed in the new array.
+
+Note that that you cannot use the Array `map` or `filter` methods to solve this
+problem.
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
