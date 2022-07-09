@@ -10,7 +10,7 @@ let andSelect = function(array, cb1, cb2) {
     let newA = [];
     for (let i = 0; i < array.length; i++){
         if (cb1(array[i]) && cb2(array[i])){
-            newA.push(array[i])
+            newA.push(array[i]);
         }
     }
     return newA;
