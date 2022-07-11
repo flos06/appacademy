@@ -5,6 +5,22 @@ result of the callback that is greater.
 
 Examples:
 
+
+*******************************************************************************/
+
+let greaterCallbackValue = function(val, cb1, cb2) {
+        let cb1Val = cb1(val)
+        let cb2Val = cb2(val)
+        if (cb1Val > cb2Val) {
+            return cb1Val;
+        } else {
+            return cb2Val;
+        }
+
+
+};
+
+
 let doubler = function (n) {
     return 2 * n;
 }
@@ -16,14 +32,6 @@ let squarer = function (n) {
 console.log(greaterCallbackValue(5, doubler, squarer));     // 25
 console.log(greaterCallbackValue(1, doubler, squarer));     // 2
 console.log(greaterCallbackValue(9, Math.sqrt, doubler));   // 18
-*******************************************************************************/
-
-let greaterCallbackValue = function() {
-
-};
-
-
-
 
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

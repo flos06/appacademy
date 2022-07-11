@@ -3,9 +3,24 @@ Write a function `xorSelect` that accepts an array and two callback as arguments
 The function should return a new array containing elements of the original array
 that result in true when passed in one of the callbacks, but not both.
 
+
+*******************************************************************************/
+
+let xorSelect = function(array, cb1, cb2) {
+  let newA = [];
+  array.forEach((element) => {
+    if (cb1(element) && !cb2(element)){
+      newA.push(element)
+    } else if (!cb1(element) && cb2(element)){     
+      newA.push(element)
+    }
+});
+return newA;
+};
+
 Examples:
 
-let isEven = function(n) {
+var isEven = function(n) {
   return n % 2 === 0;
 };
 
@@ -29,13 +44,6 @@ console.log(
   xorSelect(["art", "academy", "app", "cat", "buttery"], longString, startsA)
 );
 // [ 'art', 'app', 'buttery' ]
-*******************************************************************************/
-
-let xorSelect = function() {
-
-};
-
-
 
 
 
