@@ -6,6 +6,23 @@ when passed into the callback.
 
 Examples:
 
+*******************************************************************************/
+
+let atMost = function(array, num, cb) {
+    let count = 0
+    array.forEach((element) => {
+        if (cb(element)){
+            count++;
+        }
+    })
+    if (count <= num) {
+        return true;
+    }
+    return false;
+};
+
+
+
 let isPositive = function (n) {
     return n > 0;
 };
@@ -19,14 +36,6 @@ console.log(atMost([6, 2, 4, 1], 3, isPositive));                               
 console.log(atMost(['boat', 'cat', 'car'], 1, startsWithA));                    // true
 console.log(atMost(['boat', 'cat', 'car', 'academy'], 1, startsWithA));         // true
 console.log(atMost(['boat', 'arc', 'cat', 'car', 'academy'], 1, startsWithA));  // false
-
-*******************************************************************************/
-
-let atMost = function() {
-
-};
-
-
 
 
 
