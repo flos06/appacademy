@@ -13,7 +13,14 @@ reverse(""); // ""
 ***********************************************************************/
 
 // your code here
+let reverse = function(string){
+  if (string.length === 0){
+    return string;
+  }
+  return string.charAt(string.length-1) + reverse(string.slice(0, -1))
+}
 
+console.log(reverse("dog")); // "god"
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;

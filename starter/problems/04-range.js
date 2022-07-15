@@ -12,8 +12,21 @@ range(7, 6); // []
 
 
 // your code here
+let range = function(start, end){
+  if (start === end - 1) {
+    return [start];
+  }
+  else if (end < start){
+    return []
+  } 
 
+  
+  return [start, ...range(start + 1, end)]
 
+}
+console.log(range(1, 5)); // [1, 2, 3, 4]
+range(3, 4); // [3]
+range(7, 6); // []
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = range;
