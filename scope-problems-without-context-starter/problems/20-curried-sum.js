@@ -31,18 +31,42 @@ const sum = curriedSum(4); // returns a function
 sum(5) // returns a function
 sum(20) // returns a function
 sum(30) // returns a function
-sum(20); // => returns 75
+console.log(sum(20)); // => returns 75
+
 
 // 2
 // this function can also be invoked like this:
-const sum = curriedSum(3)(2)(1)(7); // => returns 10
 
+const sum = curriedSum(3)(2)(1)(7); // => returns 10
 AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Come up with at least two situations (one per person) on when currying would
   be useful
 ***********************************************************************/
 
 // your code here
+const curriedSum = numArgs => {
+  let numbers = [];
+  
+  function _curriedSum(num){
+    numbers.push(num)
+
+    if (numbers.length === numArgs){
+      let total = 0
+      numbers.forEach((el) => {
+        total += el;
+      })
+      return total;
+    } else {
+      return _curriedSum
+    }
+  }
+  return _curriedSum
+}
+
+
+
+const sum = curriedSum(3)(2)(1)(7); // => returns 10
+console.log(sum)
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

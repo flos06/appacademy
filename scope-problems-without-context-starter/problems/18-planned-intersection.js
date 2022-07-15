@@ -16,7 +16,26 @@ console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 *******************************************************************************/
 
 // your code here
+ const plannedIntersect = firstArr => {
+  
+  return function(secArr){
+    let newA = []
+    for (let i = 0; i < secArr.length; i++) {
+      if(firstArr.includes(secArr[i])){
+        newA.push(secArr[i])
+      }
+    }
+    return newA
+  }
+ }
 
+
+let abc = plannedIntersect(["a", "b", "c"]); // returns a function
+console.log(abc(["b", "d", "c"])); // returns [ 'b', 'c' ]
+
+
+let fame = plannedIntersect(["f", "a", "m", "e"]); // returns a function
+console.log(fame(["a", "f", "z", "b"])); // returns [ 'f', 'a' ]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 
 try {

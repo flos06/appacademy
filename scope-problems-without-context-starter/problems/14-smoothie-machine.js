@@ -7,9 +7,7 @@ string including all of the parameters of smoothieMachine and the return
 function.
 
 See below for examples:
-
 let smoothie1 = smoothieMachine();
-
 console.log(smoothie1("milk"));
 // prints "I'm having a smoothie with milk"
 console.log(smoothie1("kale", "spinach"));
@@ -19,11 +17,38 @@ console.log(smoothie1("honey", "pears", "berries"));
 
 let smoothie2 = smoothieMachine("apples", "bananas", "berries");
 console.log(smoothie2("pineapple"));
-// prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
 // your code here
+const smoothieMachine = (...arg) => {
+  let newA = []
+  let sent = ''
+  return function(...arg2) {
+    for (let i = 0; i < arg.length; i++){
+      newA.push(arg[i])
+    }
+    for (let i = 0; i < arg2.length; i++){
+      newA.push(arg2[i])
+      
+    }
 
+    sent = newA.join(' and ')
+    return "I'm having a smoothie with " + sent
+  }
+}
+let smoothie1 = smoothieMachine();
+console.log(smoothie1("milk"));
+// prints "I'm having a smoothie with milk"
+console.log(smoothie1("kale", "spinach"));
+// prints "I'm having a smoothie with milk and kale and spinach"
+console.log(smoothie1("honey", "pears", "berries"));
+// prints "I'm having a smoothie with milk and kale and spinach and honey and pears and berries"
+
+let smoothie2 = smoothieMachine("apples", "bananas", "berries");
+console.log(smoothie2("pineapple"));
+
+
+// prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = smoothieMachine;
