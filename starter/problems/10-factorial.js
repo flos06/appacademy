@@ -16,6 +16,16 @@ factorial(3); // 6
 factorial(5); // 120
 ***********************************************************************/
 
+let factorial = function(num){
+  if (num === 1){
+    return true;
+  }
+  return num * factorial(num - 1) 
+}
+
+console.log(factorial(3))
+
+
 // your code here
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

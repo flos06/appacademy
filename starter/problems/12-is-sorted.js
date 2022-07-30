@@ -11,7 +11,23 @@ isSorted([5, 4, 3, 2, 1]); // false
 ***********************************************************************/
 
 // your code here
+function isSorted(array){
 
+  if (array.length === 1){
+    return true;
+  }
+  if (array[0]  < array[1]){
+    return isSorted(array.slice(1))
+  } else {
+    return false;
+  }
+
+}
+
+console.log(isSorted([1, 2, 3, 4, 5]))
+console.log(isSorted([1, 2, 4, 3, 5]))
+console.log(isSorted([2, 4, 6, 7, 8]))
+console.log(isSorted([5, 4, 3, 2, 1]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = isSorted;
