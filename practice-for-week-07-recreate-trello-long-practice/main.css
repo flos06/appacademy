@@ -1,5 +1,80 @@
 /* Your code here */
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+.header-nav__container {
+  display: flex;
+  background-color: #026aa7;
+  font-size: 16px;
+  padding: 4px;
+  color: white;
+  line-height: 20px;
+  justify-content: space-between;
+}
 
+.header-nav__group {
+  margin: 1px;
+  padding: 1px;
+}
+#alerts {
+  background-color: #cf613d;
+}
+
+@media screen and (max-width: 730px) {
+  #search { display:none;}
+  .boards-label {display:none;}
+
+  /* Hide the header search input field. */
+  /* Hide the "Boards" text, but leave the boards icon. */
+}
+
+.team__container {
+  background-color: #f4f6f7;
+  padding: 32px;
+}
+
+.team__info {
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 650px;
+  text-align: center;
+}
+
+.team__info > h1 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.team__info a {
+  color: #172b4d;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.tabbed-nav__container {
+  background-color: #f4f6f7;
+}
+.tabbed-nav__group {
+  border-bottom: 1px solid #dfe1e6;
+  display: flex;
+  justify-content: center;
+}
+
+.tabbed-nav__link {
+  background-color: white;
+  border: 1px solid #dfe1e6;
+  border-bottom: 0;
+  border-radius: 2px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 10px;
+  margin: 0 5px;
+  color: #172b4d;
+}
 /* Supplied CSS follows. */
 .header-nav__group{
   display: flex;
