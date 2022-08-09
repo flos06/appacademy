@@ -1,1 +1,75 @@
-/* Your code here */
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 2fr 1fr 0.75fr;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-top:3px;
+    border-bottom: 3px;
+    border-style: solid;
+    position: relative;
+    border-color: grey;
+    
+
+}
+
+.column1, .column2, .column3, .column4, .column5, .column6, .column7,  .column9 {
+    border-right: 1px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: solid;
+    border-color: lightgray;
+}
+
+
+.finance{
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: grey;
+    margin-top: 10px;
+}
+.gridheaders {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.gridtext {
+    font-size: 12px;
+    margin-top: 10px;
+    align-items: center;
+    
+
+}
+
+.grid-images {
+    margin-top: 10px;
+    margin-right: 10px;
+    display:flex;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+
+.column9 {
+    display:flex;
+    align-items: center;
+}
+
+.percentages {
+    color:green;
+    padding-left: 40px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: grey;
+    margin-top: 10px;
+    
+}
+
+.test {
+    display:flex;
+}

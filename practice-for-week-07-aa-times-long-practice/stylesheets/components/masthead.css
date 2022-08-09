@@ -1,1 +1,104 @@
-/* Your code here */
+.masthead {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+    "menu-search-button . action-buttons"
+    ". little-technologies ."
+    "date logo today-paper";
+    
+}
+
+.mast_men-and-search {
+    grid-column-start: 0;
+    display:flex;
+    align-items: center;
+    padding-left: 20px;
+    grid-area: menu-search-button;
+}
+
+.actions{
+    grid-column-end: 6;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 10px;
+    grid-area: action-buttons;
+}
+
+.technologies {
+    grid-column-start: 3;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    grid-area: little-technologies;
+    color: #6f6f6f;
+
+    
+    
+}
+
+.techword {
+    border-top: 1px;
+    border-left: 1px;
+    border-right: 1px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    position: relative;
+    top: 1px;
+    background-color: white;
+
+}
+
+.center {
+    margin: 5px;
+}
+
+.date {
+    grid-row-start: 3;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px;
+    border-top: 1px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    grid-area: date;
+    padding-bottom: 11px;
+}
+
+.logo {
+    grid-row-start: 3;
+    grid-column-start: 3;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    border-bottom: 1px;
+    border-top: 1px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    grid-area: logo;
+    padding-bottom: 11px;
+
+}
+
+.paper {
+    grid-row-start: 3;
+    grid-column-end: 6;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-top: 1px;
+    border-bottom: 1px;
+    border-color: #e2e2e2;
+    border-style: solid;
+    grid-area: today-paper;
+    padding-bottom: 11px;
+}
+
+.menu-button {
+    font-size: 11px;
+    padding: 7px 9px;
+}
+
+.menu-button:hover {
+    color: #f7f7f5;
+}
