@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   console.log('event-handling.js script was successfully loaded');
-  const cogIcon = document.querySelector('.fas.fa-cog');
+  const cogIcon = document.querySelector('.fa.fa-cog');
   cogIcon.addEventListener('click', event => {
     console.log('Gear clicked');
     event.stopPropagation();
